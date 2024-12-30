@@ -27,7 +27,11 @@
     "build": "node ../../scripts/build/build.js",
     "clean": "node ../../scripts/build/clean.js"
   },
-  "keywords": ["locoui", "vue", "core"],
+  "keywords": [
+    "locoui",
+    "vue",
+    "core"
+  ],
   "dependencies": {
     "tailwind-merge": "2.5.5"
   },
