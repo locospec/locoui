@@ -33,8 +33,10 @@
     "ui"
   ],
   "dependencies": {
-    "tailwind-merge": "2.5.5",
-    "@radix-ui/react-separator": "1.1.1"
+    "@radix-ui/react-accordion": "1.2.2",
+    "@radix-ui/react-separator": "1.1.1",
+    "lucide-react": "0.469.0",
+    "tailwind-merge": "2.5.5"
   },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
@@ -44,6 +46,7 @@
     ".": "./src/index.ts",
     "./utils/cn": "./src/utils/cn.ts",
     "./separator/separator": "./src/separator/separator.tsx",
+    "./accordian/accordian": "./src/accordian/accordian.tsx",
     "./package.json": "./package.json"
   }
 }
