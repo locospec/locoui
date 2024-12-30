@@ -1,0 +1,79 @@
+{
+  "extends": ["config:base"],
+  "semanticCommits": false,
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "hast",
+        "rehype",
+        "remark",
+        "unified",
+        "unist",
+        "react-markdown"
+      ],
+      "groupName": "unified"
+    },
+    {
+      "matchPackagePatterns": ["clerk"],
+      "groupName": "clerk"
+    },
+    {
+      "matchPackagePatterns": ["stripe"],
+      "groupName": "stripe"
+    },
+    {
+      "matchPackagePatterns": ["monaco"],
+      "groupName": "monaco"
+    },
+    {
+      "matchPackagePatterns": ["@testing-library/"],
+      "groupName": "testing-library"
+    },
+    {
+      "matchPackagePatterns": ["@radix-ui/"],
+      "groupName": "radix"
+    },
+    {
+      "matchPackageNames": [
+        "@wordpress/components",
+        "cross-env",
+        "cross-spawn",
+        "dotenv",
+        "framer-motion",
+        "fs-extra",
+        "glob",
+        "jsdom",
+        "lerna",
+        "lodash-es",
+        "match-sorter",
+        "null-loader",
+        "react",
+        "react-dom",
+        "react-router",
+        "react-shadow",
+        "react-toastify",
+        "textarea-caret",
+        "tsup",
+        "typescript",
+        "webpack",
+        "zod"
+      ],
+      "matchPackagePatterns": [
+        "^@babel/",
+        "^@biomejs/",
+        "^@playwright/",
+        "^@radix-ui/",
+        "^@rollup/",
+        "^@testing-library/",
+        "^@types/",
+        "^@vitest/",
+        "^prettier",
+        "^vitest",
+        "^stylelint"
+      ],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
+    }
+  ]
+}

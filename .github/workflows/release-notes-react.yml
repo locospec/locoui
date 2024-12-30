@@ -1,0 +1,45 @@
+name: Release Notes for Main Branch
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "packages/locolens-react/**"
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Read version from package.json
+        id: get_version
+        run: |
+          version=$(node -p "require('./packages/locolens-react/package.json').version")
+          echo "version=${version}" >> $GITHUB_ENV
+
+      - name: Echo release version
+        run: echo ${{ github.event.inputs.release_version }}
+
+      - name: Run Changelog CI
+        uses: saadmk11/changelog-ci@v1.1.2
+        with:
+          changelog_filename: CHANGELOG.md
+          config_file: "./changelog-ci-config.json"
+          release_version: ${{ env.version }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: locolens-v${{ env.version }}
+          release_name: Release ${{ env.version }}
+          body_path: ./packages/locolens-react/CHANGELOG.md
+          draft: true
+          prerelease: true

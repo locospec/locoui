@@ -1,0 +1,37 @@
+name: 🐛 Bug report
+description: Create a report to help us improve.
+labels: ["potential bug"]
+body:
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: Current behavior
+      description: Explain what's happening.
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: Steps to reproduce the bug
+      description: >
+        Provide a repository with the bug and describe the steps to reproduce it. _Bug reports
+        without a reproduction may be ignored_.
+      value: |
+        1. Remove any line
+        2. See console logs
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: Expected behavior
+      description: Explain how it should behave.
+  - type: textarea
+    attributes:
+      label: Workaround
+      description: >
+        If you have fixed this issue in userland, please describe your solution here to help others.
+        [Why are workarounds important?](https://x.com/diegohaz/status/1551476114027069441)
+  - type: textarea
+    attributes:
+      label: Possible solutions
+      description: If possible, describe how this bug could be fixed in the library code.

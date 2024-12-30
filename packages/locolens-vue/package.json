@@ -1,0 +1,42 @@
+{
+  "name": "@locolens/vue",
+  "version": "0.0.1",
+  "description": "LoCoLens Vue",
+  "sideEffects": false,
+  "license": "MIT",
+  "homepage": "https://locolens.org",
+  "type": "module",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "types": "src/index.ts",
+  "bin": {
+    "init": "node ./bin/init.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/locospec/locolens.git",
+    "directory": "packages/locolens/vue"
+  },
+  "author": {
+    "name": "Shrey Dhyani",
+    "email": "shrey@betalectic.com",
+    "url": "https://github.com/ShreyDhyani"
+  },
+  "scripts": {
+    "lint": "biome check .",
+    "build": "node ../../scripts/build/build.js",
+    "clean": "node ../../scripts/build/clean.js"
+  },
+  "keywords": ["locolens", "vue", "core"],
+  "dependencies": {
+    "tailwind-merge": "2.5.5"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./package.json": "./package.json"
+  }
+}
