@@ -1,0 +1,12 @@
+{
+  "mode": "pre",
+  "tag": "alpha",
+  "initialVersions": {
+    "examples": "0.0.0",
+    "guide": "0.0.0",
+    "@locoui/core": "0.0.0",
+    "@locoui/react": "0.0.0",
+    "@locoui/vue": "0.0.0"
+  },
+  "changesets": []
+}
