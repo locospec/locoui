@@ -4,6 +4,8 @@
   "type": "module",
   "scripts": {
     "start": "npm start -w website",
+    "types": "node ./scripts/schema/generate-types.js",
+    "types:clean": "node ./scripts/schema/cleanup-types.js",
     "react17": "npm i --no-save react@17 react-dom@17 @testing-library/react@12 @testing-library/dom@8",
     "reactnext": "npm i --no-save react@next react-dom@next",
     "dev-package-json": "node scripts/build/package-json-dev.js",
@@ -133,6 +135,7 @@
     "hastscript": "7.2.0",
     "husky": "9.1.7",
     "jsdom": "25.0.1",
+    "json-schema-to-typescript": "15.0.3",
     "lerna": "8.1.9",
     "lint-staged": "15.2.10",
     "lodash-es": "4.17.21",
