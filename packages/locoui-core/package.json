@@ -1,18 +1,18 @@
 {
-  "name": "@locolens/core",
-  "version": "0.0.1",
-  "description": "LocoLens Core",
+  "name": "@locoui/core",
+  "version": "0.0.0",
+  "description": "LocoUI Core",
   "sideEffects": false,
   "license": "MIT",
-  "homepage": "https://locolens.org",
+  "homepage": "https://locoui.org",
   "type": "module",
   "main": "src/index.ts",
   "module": "src/index.ts",
   "types": "src/index.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/locospec/locolens.git",
-    "directory": "packages/locolens-core"
+    "url": "https://github.com/locospec/locoui.git",
+    "directory": "packages/locoui-core"
   },
   "author": {
     "name": "Shrey Dhyani",
@@ -25,7 +25,7 @@
     "clean": "node ../../scripts/build/clean.js"
   },
   "keywords": [
-    "locolens",
+    "lococui",
     "core"
   ],
   "exports": {

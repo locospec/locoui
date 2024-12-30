@@ -1,1 +1,1 @@
-# LoCoLens logo
+# LoCoUI logo
