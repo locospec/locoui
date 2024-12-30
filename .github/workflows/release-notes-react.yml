@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "packages/locolens-react/**"
+      - "packages/locoui-react/**"
 
 jobs:
   build:
@@ -18,7 +18,7 @@ jobs:
       - name: Read version from package.json
         id: get_version
         run: |
-          version=$(node -p "require('./packages/locolens-react/package.json').version")
+          version=$(node -p "require('./packages/locoui-react/package.json').version")
           echo "version=${version}" >> $GITHUB_ENV
 
       - name: Echo release version
@@ -38,8 +38,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: locolens-v${{ env.version }}
+          tag_name: locoui-v${{ env.version }}
           release_name: Release ${{ env.version }}
-          body_path: ./packages/locolens-react/CHANGELOG.md
+          body_path: ./packages/locoui-react/CHANGELOG.md
           draft: true
           prerelease: true

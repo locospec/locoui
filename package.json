@@ -48,7 +48,7 @@
     "lint-css": "stylelint '**/*.css' --ignore-path .gitignore",
     "tsc": "conc -r 'tsc --noEmit' 'tsc --noEmit -p website/tsconfig.json'",
     "tsc-clean": "tsc --build --clean",
-    "build": "lerna exec --scope @locolens/* -- npm run build",
+    "build": "lerna exec --scope @locoui/* -- npm run build",
     "app:dev": "lerna run dev --scope=demo",
     "build-website": "npm run build --prefix website",
     "build-website-lite": "cross-env DISABLE_SHIKI=true npm run build-website",

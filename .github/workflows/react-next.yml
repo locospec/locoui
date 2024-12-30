@@ -9,7 +9,7 @@ jobs:
   install:
     # Prevent workflow from running on forks.
     # Because the test job depends on install, preventing install also prevents the test from being run.
-    if: github.repository == 'locospec/locolens'
+    if: github.repository == 'locospec/locoui'
 
     name: Install node modules
     runs-on: ubuntu-latest

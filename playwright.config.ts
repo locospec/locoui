@@ -62,7 +62,7 @@ export default defineConfig({
     },
     // {
     //   name: "plus",
-    //   // testMatch: [/website\/tests\/locolens-plus/],
+    //   // testMatch: [/website\/tests\/locoui-plus/],
     //   use: devices["Desktop Chrome"],
     // },
     {

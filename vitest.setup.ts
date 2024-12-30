@@ -1,6 +1,6 @@
 // import "@testing-library/jest-dom/vitest";
 
-// import { render } from "@locolens/test/react";
+// import { render } from "@locoui/test/react";
 // import * as matchers from "@testing-library/jest-dom/matchers";
 // import { Suspense, createElement, version } from "react";
 // import failOnConsole from "vitest-fail-on-console";
