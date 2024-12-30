@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Separator",
+  "description": "A component used to visually separate two sections, with options for orientation, margin, size, and optional text.",
+  "type": "object",
+  "properties": {
+    "orientation": {
+      "type": "string",
+      "description": "Defines the orientation of the separator.",
+      "enum": ["horizontal", "vertical"],
+      "default": "horizontal"
+    },
+    "decorative": {
+      "type": "boolean",
+      "description": "Indicates whether the separator is decorative and should be excluded from the accessibility tree.",
+      "default": false
+    },
+    "text": {
+      "type": ["string", "null"],
+      "description": "Optional text displayed in the center of the separator.",
+      "default": null
+    },
+    "margin": {
+      "type": "string",
+      "description": "Defines the margin around the separator (e.g., '8px', '1rem')."
+    },
+    "size": {
+      "type": "string",
+      "description": "Specifies the thickness or size of the separator (e.g., '1px', '2rem')."
+    }
+  },
+  "required": ["orientation", "decorative"],
+  "additionalProperties": false
+}

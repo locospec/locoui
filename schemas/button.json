@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Button",
+  "description": "A button component with customizable properties such as variant, size, disabled state, and event handling.",
+  "type": "object",
+  "properties": {
+    "variant": {
+      "type": "string",
+      "description": "Defines the style variant of the button.",
+      "enum": ["primary", "secondary", "tertiary", "danger", "success"],
+      "default": "primary"
+    },
+    "size": {
+      "type": "string",
+      "description": "Defines the size of the button.",
+      "enum": ["small", "medium", "large"],
+      "default": "medium"
+    },
+    "disabled": {
+      "type": "boolean",
+      "description": "Determines if the button is disabled.",
+      "default": false
+    },
+    "text": {
+      "type": "string",
+      "description": "The text content displayed on the button.",
+      "default": ""
+    },
+    "onClick": {
+      "type": "string",
+      "description": "Function called when the button is clicked. Expected to be a function reference or event handler.",
+      "default": ""
+    },
+    "type": {
+      "type": "string",
+      "description": "Defines the button type attribute.",
+      "enum": ["button", "submit", "reset"],
+      "default": "button"
+    },
+    "icon": {
+      "type": ["string", "null"],
+      "description": "Optional icon to be displayed alongside the text in the button.",
+      "default": null
+    },
+    "loading": {
+      "type": "boolean",
+      "description": "Displays a loading spinner or state if true.",
+      "default": false
+    },
+    "fullWidth": {
+      "type": "boolean",
+      "description": "When true, the button takes up the full width of its container.",
+      "default": false
+    },
+    "ariaLabel": {
+      "type": "string",
+      "description": "Optional aria-label for accessibility purposes.",
+      "default": ""
+    },
+    "className": {
+      "type": ["string", "null"],
+      "description": "Optional custom class name for styling.",
+      "default": null
+    }
+  },
+  "required": ["text", "variant", "size", "disabled"],
+  "additionalProperties": false
+}
