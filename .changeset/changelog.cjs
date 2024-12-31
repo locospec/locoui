@@ -1,5 +1,6 @@
 /** @type {import("@changesets/types").ChangelogFunctions["getDependencyReleaseLine"]} */
 async function getDependencyReleaseLine(_, dependenciesUpdated) {
+  console.log("In getDependencyReleaseLine , [ ", dependenciesUpdated," ]");
   if (dependenciesUpdated.length === 0) return "";
   const updatedDepenenciesList = dependenciesUpdated.map(
     (dependency) => `\`${dependency.name}@${dependency.newVersion}\``,
@@ -9,6 +10,7 @@ async function getDependencyReleaseLine(_, dependenciesUpdated) {
 
 /** @type {import("@changesets/types").ChangelogFunctions["getReleaseLine"]} */
 async function getReleaseLine(changeset) {
+  console.log(">>>>> In getReleaseLine! [ ", changeset," ]");
   const [firstLine, ...nextLines] = changeset.summary
     .split("\n")
     .map((l) => l.trimEnd());
@@ -22,6 +24,7 @@ async function getReleaseLine(changeset) {
  * @param {Array<Promise<string>} changelogLines
  */
 async function getChangelogText(changelogLines) {
+  console.log(">>> In getChangelogText  [ ", changelogLines," ]");
   const lines = await Promise.all(changelogLines);
   if (!lines.length) return "";
 
