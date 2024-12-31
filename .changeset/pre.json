@@ -9,6 +9,7 @@
     "@locoui/vue": "0.0.0"
   },
   "changesets": [
+    "cyan-rocks-melt",
     "empty-geese-press"
   ]
 }
