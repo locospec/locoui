@@ -56,4 +56,4 @@ async function generateTypesFromSchemas(input, output) {
   }
 }
 
-generateTypesFromSchemas('/locoui-core/src/schemas', '/locoui-core/types');
+generateTypesFromSchemas('/packages/locoui-core/src/schemas', '/packages/locoui-core/types');

@@ -47,8 +47,8 @@
     ".": "./src/index.ts",
     "./utils/cn": "./src/utils/cn.ts",
     "./separator/separator": "./src/separator/separator.tsx",
+    "./aspect-ratio/aspect-ratio": "./src/aspect-ratio/aspect-ratio.tsx",
     "./accordian/accordian": "./src/accordian/accordian.tsx",
-    "./aspect-ratio/aspect-ratio":"./src/aspect-ratio/aspect-ratio.tsx",
     "./package.json": "./package.json"
   }
 }

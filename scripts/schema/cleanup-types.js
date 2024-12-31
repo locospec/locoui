@@ -35,4 +35,4 @@ function cleanTypesDirectory(types_folder) {
 }
 
 // Execute the cleanup function
-cleanTypesDirectory('types');
+cleanTypesDirectory('/packages/locoui-core/types');
