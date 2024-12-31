@@ -8,5 +8,7 @@
     "@locoui/react": "0.0.0",
     "@locoui/vue": "0.0.0"
   },
-  "changesets": []
+  "changesets": [
+    "empty-geese-press"
+  ]
 }
