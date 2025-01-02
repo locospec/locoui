@@ -32,6 +32,7 @@ export function getChangesetFilename(output) {
 
       return filename;
   } catch (error) {
-      throw new Error(`Failed to create or parse changeset: ${error}`);
+    console.error("Could not find changeset file path in command output", error);
+    process.exit();
   }
 }
