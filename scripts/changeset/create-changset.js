@@ -25,7 +25,8 @@ const output = execSync('npx changeset add --empty', { encoding: 'utf-8' });
 console.log("Creating new Empty Changeset \n",output);
 
 // Step 2: Extract the changeset file path from the output
-const changesetPathMatch = output.match(/info (.*\.md)/);
+// const changesetPathMatch = output.match(/info (.*\.md)/);
+const changesetPathMatch = output.match(/info\s+(.+\.md)/);
 
 if (!changesetPathMatch || !changesetPathMatch[1]) {
   console.error('No changeset file path found in the command output.');
