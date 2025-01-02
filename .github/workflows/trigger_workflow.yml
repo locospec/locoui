@@ -16,6 +16,7 @@ on:
         description: "Select version increment"
         required: true
         type: choice
+        default: patch
         options:
           - major
           - minor
