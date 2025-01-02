@@ -18,7 +18,7 @@
     },
     "disabled": {
       "type": "boolean",
-      "description": "Determines if the button is disabled or not.",
+      "description": "Determines if the button is disabled.",
       "default": false
     },
     "text": {
