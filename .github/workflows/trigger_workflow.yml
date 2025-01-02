@@ -62,4 +62,4 @@ jobs:
 
       - name: Create Changeset
         run: |
-          echo ${{ env.ROOT_NAME }} ${{ github.event.inputs.package_name }} ${{ github.event.inputs.version_increment }}
+          node ./scripts/changeset/create-changset.js ${{ env.ROOT_NAME }} ${{ github.event.inputs.package_name }} ${{ github.event.inputs.version_increment }}
