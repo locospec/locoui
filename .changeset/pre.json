@@ -9,6 +9,8 @@
     "@locoui/vue": "0.0.0"
   },
   "changesets": [
+    "brave-news-smell",
+    "dull-hornets-occur",
     "red-squids-rest",
     "tiny-pandas-swim"
   ]
