@@ -8,5 +8,8 @@
     "@locoui/react": "0.0.0",
     "@locoui/vue": "0.0.0"
   },
-  "changesets": []
+  "changesets": [
+    "red-squids-rest",
+    "tiny-pandas-swim"
+  ]
 }
