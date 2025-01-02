@@ -1,0 +1,51 @@
+name: Version Update Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      package_name:
+        description: "Select the package name"
+        required: true
+        type: choice
+        options:
+          - react
+          - core
+          - vue
+
+      version_increment:
+        description: "Select version increment"
+        required: true
+        type: choice
+        options:
+          - major
+          - minor
+          - patch
+          # This will dynamically populate the options from the pre.json file
+          - pre
+
+jobs:
+  version-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Get version increment options from pre.json
+        id: get-pre-version
+        run: |
+          if [[ -f ./changeset/pre.json ]]; then
+            echo "Found pre.json, extracting the tag key..."
+            PRE_TAG=$(jq -r '.tag' ./changeset/pre.json)
+            echo "pre version tag: $PRE_TAG"
+            echo "PRE_TAG=$PRE_TAG" >> $GITHUB_ENV
+          else
+            echo "No pre.json found, skipping pre option."
+          fi
+
+      - name: Log user inputs
+        run: |
+          echo "Package Name: ${{ github.event.inputs.package_name }}"
+          echo "Version Increment: ${{ github.event.inputs.version_increment }}"
+          if [ -n "$PRE_TAG" ]; then
+            echo "Pre version tag: $PRE_TAG"
+          fi
