@@ -1,5 +1,6 @@
-import { twMerge } from "tailwind-merge"
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: string[]) {
-  return twMerge(inputs)
+  console.log(">>> In cn  [ ", inputs, " ]");
+  return twMerge(inputs);
 }
