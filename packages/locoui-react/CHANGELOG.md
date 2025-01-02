@@ -1,5 +1,11 @@
 # @locoui/react
 
+## 0.0.1-alpha.3
+
+### Patch Changes
+
+- Added sample log for react package
+
 ## 0.0.1-alpha.2
 
 ### Patch Changes

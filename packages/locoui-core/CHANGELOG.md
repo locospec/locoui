@@ -1,5 +1,11 @@
 # @locoui/core
 
+## 0.0.1-alpha.2
+
+### Patch Changes
+
+- This is sample for core chnage
+
 ## 0.0.1-alpha.1
 
 ### Patch Changes
