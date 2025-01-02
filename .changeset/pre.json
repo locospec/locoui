@@ -8,9 +8,5 @@
     "@locoui/react": "0.0.0",
     "@locoui/vue": "0.0.0"
   },
-  "changesets": [
-    "cyan-rocks-melt",
-    "empty-geese-press",
-    "strange-olives-jam"
-  ]
+  "changesets": []
 }
