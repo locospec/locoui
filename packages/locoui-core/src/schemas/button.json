@@ -12,7 +12,7 @@
     },
     "size": {
       "type": "string",
-      "description": "Defines the size of the button.",
+      "description": "Defines the size of the button as a string.",
       "enum": ["small", "medium", "large"],
       "default": "medium"
     },
