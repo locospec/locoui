@@ -21,7 +21,7 @@ if (!version_increment) {
 }
 
 // Step 1: Run the npx command to create an empty changeset and capture the output
-const output = execSync('npm run changeset add --empty', { encoding: 'utf-8' });
+const output = execSync('npx changeset add --empty', { encoding: 'utf-8' });
 
 // Step 2: Extract the changeset file path from the output
 const changesetPathMatch = output.match(/info (.*\.md)/);
