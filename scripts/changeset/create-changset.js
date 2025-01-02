@@ -22,11 +22,10 @@ if (!version_increment) {
 
 // Step 1: Run the npx command to create an empty changeset and capture the output
 const output = execSync('npx changeset add --empty', { encoding: 'utf-8' });
+console.log("Creating new Empty Changeset \n",output);
 
 // Step 2: Extract the changeset file path from the output
 const changesetPathMatch = output.match(/info (.*\.md)/);
-console.log(">>>>> output[1]",output);
-console.log(">>>>> changesetPathMatch",changesetPathMatch, output);
 
 if (!changesetPathMatch || !changesetPathMatch[1]) {
   console.error('No changeset file path found in the command output.');
@@ -35,6 +34,7 @@ if (!changesetPathMatch || !changesetPathMatch[1]) {
 
 const changesetFilePath = changesetPathMatch[1];
 const changesetFile = path.basename(changesetFilePath);
+console.log("Empty changeset created as ",changesetFile);
 
 // Step 3: Get all git logs based on package name
 const gitlogs = getGitLogs(repo_name, packageName);
