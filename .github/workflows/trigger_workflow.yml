@@ -31,6 +31,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Get Repo name
+        id: get-repo-name
+        run: |
+          echo "Found package.json, extracting the name key..."
+          ROOT_NAME=$(jq -r '.name' ./package.json )
+          echo "root package name: $ROOT_NAME"
+          echo "ROOT_NAME=$ROOT_NAME" >> $GITHUB_ENV
+
       - name: Get version increment options from pre.json
         id: get-pre-version
         if: ${{ github.event.inputs.version_increment == 'pre' }}
@@ -51,3 +59,7 @@ jobs:
           if [ -n "$PRE_TAG" ]; then
             echo "Pre version tag: $PRE_TAG"
           fi
+
+      - name: Create Changeset
+        run: |
+          echo "Add sript to create changeset here!"
