@@ -15,18 +15,23 @@ export function getChangesetFilename(output) {
       const filePathLine = lines.find(line => line.includes('.changeset/') && line.endsWith('.md'));
 
       if (!filePathLine) {
-          throw new Error('Could not find changeset file path in command output');
+        console.error("Could not find changeset file path in command output", filePathLine);
+        process.exit();
       }
 
       // Extract just the filename using path.basename
       // This will work across different OS path formats
       const fullPath = filePathLine.trim().split(' ').pop();
+      if(!fullPath){
+        console.error("Could not find changeset file path in command output", fullPath);
+        process.exit();
+      }
 
       const filename = path.basename(fullPath);
       console.log(">>>>> filename filename filename", filename);
 
       return filename;
   } catch (error) {
-      throw new Error(`Failed to create or parse changeset: ${error.message}`);
+      throw new Error(`Failed to create or parse changeset: ${error}`);
   }
 }
