@@ -28,6 +28,14 @@ console.log("Creating new Empty Changeset \n",output);
 // const changesetPathMatch = output.match(/info (.*\.md)/);
 const changesetPathMatch = output.match(/info\s+(.+\.md)/);
 
+const ls_output = execSync('ls', { encoding: 'utf-8' });
+console.log(">>>>>>ls_output ",ls_output);
+
+console.log(" >>> changesetPathMatch >>", changesetPathMatch);
+
+console.log(">>>>> changesetPathMatch", changesetPathMatch[1]);
+
+
 if (!changesetPathMatch || !changesetPathMatch[1]) {
   console.error('No changeset file path found in the command output.');
   process.exit(1);
