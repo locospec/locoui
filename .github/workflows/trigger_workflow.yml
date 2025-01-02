@@ -36,6 +36,9 @@ jobs:
         with:
           node-version-file: .nvmrc
 
+      - name: Install Dependencies
+        run: npm install
+
       - name: Get Repo name
         id: get-repo-name
         run: |
