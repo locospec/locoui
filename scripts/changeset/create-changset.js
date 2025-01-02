@@ -25,6 +25,7 @@ const output = execSync('npm run changeset add --empty', { encoding: 'utf-8' });
 
 // Step 2: Extract the changeset file path from the output
 const changesetPathMatch = output.match(/info (.*\.md)/);
+console.log(">>>>> changesetPathMatch",changesetPathMatch);
 
 if (!changesetPathMatch || !changesetPathMatch[1]) {
   console.error('No changeset file path found in the command output.');
