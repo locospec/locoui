@@ -33,9 +33,9 @@ jobs:
       - name: Get version increment options from pre.json
         id: get-pre-version
         run: |
-          if [[ -f ./changeset/pre.json ]]; then
+          if [[ -f ./.changeset/pre.json ]]; then
             echo "Found pre.json, extracting the tag key..."
-            PRE_TAG=$(jq -r '.tag' ./changeset/pre.json)
+            PRE_TAG=$(jq -r '.tag' ./.changeset/pre.json)
             echo "pre version tag: $PRE_TAG"
             echo "PRE_TAG=$PRE_TAG" >> $GITHUB_ENV
           else
