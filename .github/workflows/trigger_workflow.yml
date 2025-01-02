@@ -32,6 +32,7 @@ jobs:
 
       - name: Get version increment options from pre.json
         id: get-pre-version
+        if: ${{ github.event.inputs.version_increment == 'pre' }}
         run: |
           if [[ -f ./.changeset/pre.json ]]; then
             echo "Found pre.json, extracting the tag key..."
