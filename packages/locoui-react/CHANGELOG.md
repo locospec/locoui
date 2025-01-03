@@ -1,5 +1,13 @@
 # @locoui/react
 
+## 0.0.1-alpha.4
+
+### Patch Changes
+
+### This changeset was generated automatically.
+
+77d7978 feat: modified script to add release step
+
 ## 0.0.1-alpha.3
 
 ### Patch Changes
