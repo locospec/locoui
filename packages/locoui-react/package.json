@@ -49,7 +49,9 @@
     ".": "./src/index.ts",
     "./utils/cn": "./src/utils/cn.ts",
     "./separator/separator": "./src/separator/separator.tsx",
+    "./carousel/carousel": "./src/carousel/carousel.tsx",
     "./card/card": "./src/card/card.tsx",
+    "./button/button": "./src/button/button.tsx",
     "./aspect-ratio/aspect-ratio": "./src/aspect-ratio/aspect-ratio.tsx",
     "./accordian/accordian": "./src/accordian/accordian.tsx",
     "./package.json": "./package.json"
