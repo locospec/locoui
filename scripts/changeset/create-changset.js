@@ -16,7 +16,7 @@ const gitlogs = getGitLogs(repo_name, packageName);
 
 // Step 4: Update the changeset file
 let content = fs.readFileSync(changesetFilePath, 'utf8');
-const updatedContent = content.replace('---\n---', `---\n"@locoui/${packageName}": ${version_increment === "pre" ? "patch" : version_increment}\n---\n\n This changeset was generated automatically. \n\n ${gitlogs}\n`);
+const updatedContent = content.replace('---\n---', `---\n"@locoui/${packageName}": ${version_increment === "pre" ? "patch" : version_increment}\n--- \n\n ${gitlogs}\n`);
 fs.writeFileSync(changesetFilePath, updatedContent);
 
 console.log(`Changeset file ${changesetFile} updated successfully for package ${packageName}.`);
