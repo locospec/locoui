@@ -13,6 +13,7 @@ const { changesetFilePath, changesetFile } = extract_and_return_file_path_and_na
 
 // Step 3: Get all git logs based on package name
 const gitlogs = getGitLogs(repo_name, packageName);
+console.log(">>> ALL GIT LOGS ARE>>>", gitlogs);
 
 // Step 4: Update the changeset file
 let content = fs.readFileSync(changesetFilePath, 'utf8');
