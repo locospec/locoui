@@ -15,5 +15,6 @@ export {
   CardDescription,
   CardContent,
 } from "./card/card.tsx";
+export { Button, buttonVariants } from "./button/button.tsx";
 
 export { cn } from "./utils/cn.ts";
