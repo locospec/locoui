@@ -48,10 +48,9 @@ export function getGitLogs(repo_name, packageName) {
     process.exit(1);
   }
 
-  // Log the git log command with version
-  // console.log(`git log --oneline @${repo_name}/${packageName}@${version}..HEAD -- ./packages/${repo_name}-${packageName}`);
   const gitLogCommand = `git log --oneline @${repo_name}/${packageName}@${version}..HEAD -- ./packages/${repo_name}-${packageName}`;
   try {
+    execSync("git fetch --tag");
     const output = execSync(gitLogCommand, { encoding: 'utf-8' });
     return output;
   } catch (err) {
