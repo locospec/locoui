@@ -1,5 +1,11 @@
 # @locoui/react
 
+## 0.1.1
+
+### Patch Changes
+
+- 74f4bcd feat: Added use of clsx component for cn function
+
 ## 0.1.0
 
 ### Minor Changes
