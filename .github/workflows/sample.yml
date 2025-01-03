@@ -1,4 +1,4 @@
-name: Version Update Workflow
+name: Sample Workflow
 
 on:
   workflow_dispatch:
