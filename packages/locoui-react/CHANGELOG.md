@@ -1,5 +1,11 @@
 # @locoui/react
 
+## 0.1.1
+
+### Patch Changes
+
+- 5db5bf6 feat: Added logs
+
 ## 0.1.0
 
 ### Minor Changes
