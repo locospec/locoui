@@ -1,5 +1,19 @@
 # @locoui/react
 
+## 0.1.1
+
+### Patch Changes
+
+### 74f4bcd feat: Added use of clsx component for cn function
+
+9d9c65c feat: Added package clsx for cn component
+6eefa9f feat: Modified code for separator component
+39b438e patch: Modified carousel component
+78c94dc feat: Modified Card component
+1726f2b feat: Name change for accordion component
+01f7a21 feat: Clean up code for AspectRatio component
+8d007e1 feat: Modified styles for button component
+
 ## 0.1.0
 
 ### Minor Changes
