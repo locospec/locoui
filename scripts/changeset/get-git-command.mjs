@@ -53,7 +53,6 @@ export function getGitLogs(repo_name, packageName) {
   try {
     execSync("git fetch --tag");
     const output = execSync(gitLogCommand, { encoding: 'utf-8' });
-    console.log(">>>>> output output output", output);
     return output;
   } catch (err) {
     throw new Error(`Failed to execute git log command: ${err}`);
