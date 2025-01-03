@@ -32,4 +32,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Check logs
-        run: git log --oneline @locoui/react@0.1.0..HEAD
+        run: git fetch --tag && git log --oneline @locoui/react@0.1.0..HEAD
