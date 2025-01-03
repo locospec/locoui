@@ -16,5 +16,14 @@ export {
   CardContent,
 } from "./card/card.tsx";
 export { Button, buttonVariants } from "./button/button.tsx";
+export {
+  Carousel,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "./carousel/carousel.tsx";
+
+// Types export
+export type { CarouselApi } from "./carousel/carousel.tsx";
 
 export { cn } from "./utils/cn.ts";
