@@ -1,0 +1,35 @@
+name: Version Update Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      package_name:
+        description: "Select the package name"
+        required: true
+        type: choice
+        options:
+          - react
+          - core
+          - vue
+
+      version_increment:
+        description: "Select version increment"
+        required: true
+        type: choice
+        default: patch
+        options:
+          - major
+          - minor
+          - patch
+          # This will dynamically populate the options from the pre.json file
+          - pre
+
+jobs:
+  version-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Check logs
+        run: git log --oneline @locoui/react@0.1.0..HEAD
