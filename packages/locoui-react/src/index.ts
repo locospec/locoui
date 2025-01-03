@@ -7,5 +7,13 @@ export {
   AccordionContent,
 } from "./accordian/accordian.tsx";
 export { AspectRatio } from "./aspect-ratio/aspect-ratio.tsx";
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "./card/card.tsx";
 
 export { cn } from "./utils/cn.ts";
