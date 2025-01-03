@@ -48,7 +48,9 @@ export function getGitLogs(repo_name, packageName) {
     process.exit(1);
   }
 
-  const gitLogCommand = `git log --oneline @${repo_name}/${packageName}@${version}..HEAD -- ./packages/${repo_name}-${packageName}`;
+  // const gitLogCommand = `git log --oneline @${repo_name}/${packageName}@${version}..HEAD -- ./packages/${repo_name}-${packageName}`;
+  const gitLogCommand = `git log --oneline @${repo_name}/${packageName}@${version}..HEAD`;
+
   console.log(">>> GIT COMMAND >>>", gitLogCommand);
   try {
     execSync("git fetch --tag");
