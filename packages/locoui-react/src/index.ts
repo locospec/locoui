@@ -5,7 +5,7 @@ export {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from "./accordian/accordian.tsx";
+} from "./accordion/accordion.tsx";
 export { AspectRatio } from "./aspect-ratio/aspect-ratio.tsx";
 export {
   Card,
