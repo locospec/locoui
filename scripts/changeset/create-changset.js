@@ -50,6 +50,8 @@ console.log("changesetFilePath --------------",changesetFilePath);
 const changesetFile = path.basename(changesetFilePath);
 console.log("changesetFile --------------",changesetFile);
 
+const __dirname = process.cwd()
+console.log(">>>>>> current path >>>", __dirname);
 // console.log(">>>>>>> changesetFilePath",changesetFilePath);
 // console.log("22>>>>> changesetFilePath", __dirname + "/.changeset/" + second_output);
 
