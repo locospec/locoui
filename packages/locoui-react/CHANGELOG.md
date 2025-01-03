@@ -1,5 +1,11 @@
 # @locoui/react
 
+## 0.1.1
+
+### Patch Changes
+
+- c805206 feat: chnaged git log system
+
 ## 0.1.0
 
 ### Minor Changes

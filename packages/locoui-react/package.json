@@ -1,6 +1,6 @@
 {
   "name": "@locoui/react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "LoCoUI React-Core",
   "sideEffects": false,
   "license": "MIT",
