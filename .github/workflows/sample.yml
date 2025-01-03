@@ -30,6 +30,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Check logs
         run: git fetch --tag && git log --oneline @locoui/react@0.1.0..HEAD
