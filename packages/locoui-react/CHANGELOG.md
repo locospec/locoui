@@ -1,5 +1,13 @@
 # @locoui/react
 
+## 0.0.1-alpha.5
+
+### Patch Changes
+
+### This changeset was generated automatically.
+
+8bc9786 Merge branch 'main' of github.com:locospec/locoui
+
 ## 0.0.1-alpha.4
 
 ### Patch Changes
