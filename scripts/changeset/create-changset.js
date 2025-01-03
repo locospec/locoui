@@ -30,12 +30,12 @@ const second_output = getChangesetFilename(output);
 
 // Step 2: Extract the changeset file path from the output
 // const changesetPathMatch = output.match(/info (.*\.md)/);
-const changesetPathMatch = output.match(/info\s+(.+\.md)/);
+// const changesetPathMatch = output.match(/info\s+(.+\.md)/);
 
-if (!changesetPathMatch || !changesetPathMatch[1]) {
-  console.error('No changeset file path found in the command output.');
-  process.exit(1);
-}
+// if (!changesetPathMatch || !changesetPathMatch[1]) {
+//   console.error('No changeset file path found in the command output.');
+//   process.exit(1);
+// }
 
 // const changesetFilePath = changesetPathMatch[1];
 const changesetFilePath = __dirname + "/.changeset/" + second_output;
